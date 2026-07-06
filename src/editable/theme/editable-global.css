@@ -121,3 +121,9 @@ body {
 .article-content a {
   color: var(--slot4-accent-fill);
 }
+
+@keyframes home-marquee { to { transform: translateX(calc(-50% - .625rem)); } }
+.home-marquee { animation: home-marquee 42s linear infinite; }
+.home-marquee:hover { animation-play-state: paused; }
+.home-grid { background-image: linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px); background-size: 100px 100px; }
+@media (prefers-reduced-motion: reduce) { .home-marquee { animation: none; } }
