@@ -53,13 +53,43 @@ const base = {
 } satisfies Omit<TaskTheme, 'kicker' | 'note'>
 
 export const taskThemes: Record<TaskKey, TaskTheme> = {
-  article: { ...base, kicker: 'Articles', note: 'In-depth reads, guides and stories worth your time.' },
+  article: {
+    ...base,
+    kicker: 'Articles',
+    note: 'In-depth reads, guides and stories worth your time.',
+    dark: true,
+    bg: '#090014',
+    surface: 'rgba(255,255,255,0.055)',
+    raised: '#180a24',
+    text: '#fff9ff',
+    muted: '#b7a9c2',
+    line: 'rgba(255,255,255,0.10)',
+    accent: '#f66bb4',
+    accentSoft: 'rgba(246,107,180,0.14)',
+    glow: 'rgba(246,107,180,0.18)',
+    radius: '2rem',
+  },
   listing: { ...base, kicker: 'Businesses', note: 'Find, compare and connect with local businesses.' },
   classified: { ...base, kicker: 'Marketplace', note: 'Fresh offers and listings, ready to act on.' },
   image: { ...base, kicker: 'Photos', note: 'A visual feed of standout images and galleries.' },
   sbm: { ...base, kicker: 'Bookmarks', note: 'Curated resources and links worth saving.' },
   pdf: { ...base, kicker: 'Documents', note: 'Downloadable guides, reports and references.' },
-  profile: { ...base, kicker: 'People', note: 'Discover creators, businesses and profiles.' },
+  profile: {
+    ...base,
+    kicker: 'People',
+    note: 'Discover creators, businesses and profiles.',
+    dark: true,
+    bg: '#090014',
+    surface: 'rgba(255,255,255,0.055)',
+    raised: '#180a24',
+    text: '#fff9ff',
+    muted: '#b7a9c2',
+    line: 'rgba(255,255,255,0.10)',
+    accent: '#bd6cf2',
+    accentSoft: 'rgba(189,108,242,0.16)',
+    glow: 'rgba(189,108,242,0.18)',
+    radius: '2rem',
+  },
 }
 
 export function getTaskTheme(task: TaskKey): TaskTheme {
